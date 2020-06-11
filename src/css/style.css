@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App{
+    background: lightyellow;
+    color: rgb(53, 47, 47);
+    font-family: 'Montserrat', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.app-title{
+    text-align: center;
+    color: lightblue;
+    font-size: 5vw;
+}
+
+.container{
+    border: 5px solid pink;
+    border-radius: 25px;
+    width: 60vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+
+.list-title{
+    text-align: center;
+    font-size: 2vw;
+}
+
+.content{
+    width: 30vw;
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-self: center;
+}
+
+.input{
+    height: 10vh;
+    align-self: center;
+
+}
+input{
+    height: 3vh;
+    border: none;
+    background-color: inherit;
+    border-bottom: 0.5px black solid;
+
+}
+
+ul{
+    align-self: center;
+    font-size: 1.5vw;
+}
+
+.delete-btn{
+    background: pink;
+    margin: 2vh 2vw;
+    font-size: 1.5vw;
+    border-radius: 70%;
+    border: none;
+    height: 4vh;
+    width: 2vw;
+}
+
+.add-btn{
+    background: lightblue;
+    height: 4vh;
+    width: 4vw;
+    margin: 2vh 2vw;
+    font-size: 1.5vw;
+    border-radius: 45%;
+    border: none;
+}
