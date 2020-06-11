@@ -1,6 +1,6 @@
-# First React project: to-to-list
+# First React project: to-do-list
 
-## Preview:
+### Preview:
 
 ![Imgur](https://i.imgur.com/I8U9A69.png?1)
 
