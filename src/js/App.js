@@ -51,7 +51,7 @@ class App extends Component {
       <div className="App">
         <p class = "app-title"> MY LIST</p>
         <div className = "container">
-          <p class = "list-title">Current To Do list:</p>
+          <p class = "list-title">Current to-do list:</p>
           <br />
           <div class = "content">
             <div class = "input">
@@ -64,7 +64,7 @@ class App extends Component {
           <button class = "add-btn" onClick={() => this.addItem()}>Add</button>
           <br />
           </div>
-          <ul>
+          <ol>
             {this.state.list.map((item, i) => {
               return (
                 <li key={i}>
@@ -73,7 +73,7 @@ class App extends Component {
                 </li>
               );
             })}
-          </ul>
+          </ol>
         </div>
       </div>
       </div>
