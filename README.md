@@ -1,8 +1,8 @@
-# First React project: to-do-list
+# To do list using REACT:
 
 ### Preview:
 
-![Imgur](https://i.imgur.com/q1k7MFu.png)
+![Imgur](https://i.imgur.com/IIcu0AD.png)
 
 
 
