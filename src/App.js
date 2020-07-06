@@ -7,8 +7,9 @@ class App extends Component {
 
     this.state = {
       userInput: "",
+      curTime: new Date().toLocaleString().substr(0, 8),
       result: [],
-       color: "",
+      color: "",
     };
   }
 
@@ -62,7 +63,9 @@ class App extends Component {
 
     return (
       <Fragment>
-        <h1>Your list for today:</h1>
+        <h1>
+          To do today, &nbsp; <span>{this.state.curTime}:</span>
+        </h1>
         <form onSubmit={this.submitHandle}>
           <input
             type="text"

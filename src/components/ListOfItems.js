@@ -4,11 +4,15 @@ const ListOfItems = (props) => {
   console.log(props.list);
 
   const toDoList = props.list.map((item) => (
+   
     <li
       key={item.id}
       // style={props.style}
     >
+      <div className="item-name">
+
       {item.title}
+      </div>
 
       <div className="actions">
         <input
