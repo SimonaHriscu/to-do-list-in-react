@@ -88,11 +88,12 @@
           margin: 1vh;
           padding: 1vh 2vw;
           border: none;
-          box-shadow: 2px 2px 3px rgb(53, 47, 47);
-          //   &:hover{
-          //       transform: scaleX(1.03);
+          box-shadow: 3px 2px 3px rgb(53, 47, 47);
+            // &:hover{
+            //   box-shadow: 2px 3px 2px rgb(53, 47, 47);
+             // transform: scaleX(1.05);
 
-          //   }
+            // }
           .item-name {
             width: 25vw;
           }
