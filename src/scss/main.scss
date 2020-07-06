@@ -54,7 +54,17 @@
             justify-content: space-between;
           }
           .delete-btn {
+            background: #204051;
+            color:white;
+            font-size: 1.5vw;
+            border-radius: 70%;
+            border: none;
+            height: 4vh;
+            width: 2vw;
+          }
+          .check-btn {
             background: pink;
+            color:white;
             font-size: 1.5vw;
             border-radius: 70%;
             border: none;
