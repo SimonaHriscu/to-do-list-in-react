@@ -2,7 +2,7 @@
 
 ### Preview:
 
-![Imgur](https://i.imgur.com/I8U9A69.png?1)
+![Imgur](https://i.imgur.com/q1k7MFu.png)
 
 
 
