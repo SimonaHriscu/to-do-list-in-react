@@ -11,10 +11,10 @@ const ListOfItems = (props) => {
       {item.title}
 
       <div className="actions">
-        <input className="check-btn"
+        <input
           type="checkbox"
           value={item.done}
-          
+          className="check-btn"
           onChange={() => props.check(item.id)}
           //  ✔
         />

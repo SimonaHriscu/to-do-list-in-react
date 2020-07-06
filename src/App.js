@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     this.changeHandle = (e) => {
       e.preventDefault();
-      const userText = e.target.value.trim();
+      const userText = e.target.value;
       // console.log(userText);
       this.setState({
         userInput: userText,
@@ -62,7 +62,7 @@ class App extends Component {
 
     return (
       <Fragment>
-        <h1>Hey, stranger, this is your list for today:</h1>
+        <h1>Your list for today:</h1>
         <form onSubmit={this.submitHandle}>
           <input
             type="text"

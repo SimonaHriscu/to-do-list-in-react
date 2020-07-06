@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
   #root {
     background: lightyellow;
     color: rgb(53, 47, 47);
@@ -12,6 +13,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+
     .h1 {
       text-align: center;
       color: lightblue;
@@ -24,7 +26,18 @@
       background-color: inherit;
       border-bottom: 0.5px black solid;
       padding: 0 0 0.4vw 0.4vw;
+      &::placeholder {
+        text-align: center;
+        color: white;
+      }
+      &:focus {
+        outline: none;
+      }
+      &:focus::placeholder {
+        color: transparent;
+      }
     }
+
     input[type="submit"] {
       height: 4vh;
       width: 4.5vw;
@@ -33,50 +46,55 @@
       border: none;
       // color: pink;
     }
+
     .items-box {
       height: 60vh;
       width: 40vw;
+
       ul {
         display: flex;
         flex-direction: column;
         align-items: center;
         font-size: 1.4vw;
         line-height: 2.5;
+
         li {
           width: 30vw;
           list-style: none;
           display: flex;
           align-items: center;
           justify-content: space-between;
+
           .actions {
             width: 5vw;
             display: flex;
             justify-content: space-between;
           }
+
           .delete-btn {
             background: #204051;
-            color:white;
+            color: white;
             font-size: 1.5vw;
             border-radius: 70%;
             border: none;
             height: 4vh;
             width: 2vw;
           }
+
           .check-btn {
             background: pink;
-            color:white;
+            color: white;
             font-size: 1.5vw;
             border-radius: 70%;
             border: none;
             height: 4vh;
             width: 2vw;
           }
-          input[type="checked"]{}
           
+          input[type="checked"] {
+          }
         }
       }
     }
   }
 }
-
-
