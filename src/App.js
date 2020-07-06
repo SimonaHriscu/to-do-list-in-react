@@ -8,7 +8,7 @@ class App extends Component {
     this.state = {
       userInput: "",
       result: [],
-      checkedItems:[],
+       color: "",
     };
   }
 
@@ -28,14 +28,16 @@ class App extends Component {
       const newItem = this.state.userInput;
       this.setState({
         userInput: "",
-        result: [...this.state.result, newItem],
+        result: [
+          ...this.state.result,
+          { id: this.state.result.length, title: newItem, done: false },
+        ],
       });
-      // console.log(this.state.result)
     };
 
     this.remove = (itemToRemove) => {
       const newArray = this.state.result.filter(
-        (item) => item !== itemToRemove
+        (item) => item.id !== itemToRemove
       );
       console.log(newArray);
       this.setState({
@@ -44,17 +46,19 @@ class App extends Component {
     };
 
     this.check = (itemToCheck) => {
-      const newCheckArray = this.state.result.filter(
-        (item) => item === itemToCheck
-      );
-      //newCheckArray.style.color="red";
-      console.log(newCheckArray);
-      this.setState({
-        checkedItems:newCheckArray,
+      const newArray = this.state.result.filter((item) => {
+        if (item.id === itemToCheck) {
+          item.done = !item.done;
+        }
+        return item;
       });
-     console.log(this.state.checkedItems)
+      console.log(newArray);
+      this.setState({
+        result: newArray,
+        // color: "red",
+      });
+      console.log(this.state.result);
     };
-
 
     return (
       <Fragment>
@@ -64,12 +68,17 @@ class App extends Component {
             type="text"
             value={this.state.userInput}
             onChange={this.changeHandle}
-            placeholder="your new item"
+            placeholder="Add an item"
           ></input>
           <input type="submit" value="Add" />
         </form>
         <div className="items-box">
-        <ListOfItems list={this.state.result} del={this.remove} check={this.check}/>
+          <ListOfItems
+            list={this.state.result}
+            del={this.remove}
+            check={this.check}
+            // style={{ color: this.state.color }}
+          />
         </div>
       </Fragment>
     );

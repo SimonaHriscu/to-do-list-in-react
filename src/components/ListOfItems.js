@@ -1,23 +1,29 @@
 import React from "react";
 
 const ListOfItems = (props) => {
-  // console.log(props.list);
+  console.log(props.list);
 
-  const toDoList = props.list.map((item, i) => {
-    return (
-      <li key={i}>
-        {item}
-        <div className="actions">
-        <button className="check-btn" onClick={() => props.check(item)}>
-          ✔
-        </button>
-        <button className="delete-btn" onClick={() => props.del(item)}>
+  const toDoList = props.list.map((item) => (
+    <li
+      key={item.id}
+      // style={props.style}
+    >
+      {item.title}
+
+      <div className="actions">
+        <input className="check-btn"
+          type="checkbox"
+          value={item.done}
+          
+          onChange={() => props.check(item.id)}
+          //  ✔
+        />
+        <button className="delete-btn" onClick={() => props.del(item.id)}>
           ✗
         </button>
-        </div>
-      </li>
-    );
-  });
+      </div>
+    </li>
+  ));
 
   return <ul>{toDoList}</ul>;
 };
