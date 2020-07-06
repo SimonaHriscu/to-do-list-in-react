@@ -8,7 +8,7 @@ const ListOfItems = (props) => {
       <li key={i}>
         {item}
         <div className="actions">
-        <button className="check-btn" onClick={() => props.del(item)}>
+        <button className="check-btn" onClick={() => props.check(item)}>
           ✔
         </button>
         <button className="delete-btn" onClick={() => props.del(item)}>

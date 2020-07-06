@@ -8,6 +8,7 @@ class App extends Component {
     this.state = {
       userInput: "",
       result: [],
+      checkedItems:[],
     };
   }
 
@@ -42,6 +43,18 @@ class App extends Component {
       });
     };
 
+    this.check = (itemToCheck) => {
+      const newCheckArray = this.state.result.filter(
+        (item) => item === itemToCheck
+      );
+      //newCheckArray.style.color="red";
+      console.log(newCheckArray);
+      this.setState({
+        checkedItems:newCheckArray,
+      });
+     console.log(this.state.checkedItems)
+    };
+
 
     return (
       <Fragment>
@@ -56,7 +69,7 @@ class App extends Component {
           <input type="submit" value="Add" />
         </form>
         <div className="items-box">
-        <ListOfItems list={this.state.result} del={this.remove} />
+        <ListOfItems list={this.state.result} del={this.remove} check={this.check}/>
         </div>
       </Fragment>
     );
