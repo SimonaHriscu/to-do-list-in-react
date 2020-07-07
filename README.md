@@ -1,8 +1,5 @@
-# To do list using REACT:
+# To do list using REACT - HOOKS:
 
-### Preview with React:
-
-![Imgur](https://i.imgur.com/IIcu0AD.png)
 
 ### Preview with React-Hooks:
 
