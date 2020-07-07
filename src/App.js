@@ -1,90 +1,67 @@
-import React, { Component, Fragment } from "react";
-import ListOfItems from "./components/ListOfItems";
+import React, { Fragment, useState } from "react";
 
-class App extends Component {
-  constructor(props) {
-    super(props);
+const ItemInfo = ({ info }) => {
+  return (
+    <div>
+      <h1>{info.title}</h1>
+    </div>
+  );
+};
 
-    this.state = {
-      userInput: "",
-      curTime: new Date().toLocaleString().substr(0, 8),
-      result: [],
-      color: "",
-    };
-  }
+const AddListForm = ({ addNewItem }) => {
+  const [userInput, setUserInput] = useState("");
+  const submitHandle = (e) => {
+    e.preventDefault();
+    if (userInput) {
+      addNewItem(userInput);
+    }
+    setUserInput("");
+  };
 
-  render() {
-    this.changeHandle = (e) => {
-      e.preventDefault();
-      const userText = e.target.value;
-      // console.log(userText);
-      this.setState({
-        userInput: userText,
-      });
-      // console.log(this.state.userInput)
-    };
+  return (
+    <form onSubmit={submitHandle}>
+      <input
+        type="text"
+        onChange={(e) => setUserInput(e.target.value)}
+        value={userInput}
+      />
+      <input type="submit" value="Add" />
+    </form>
+  );
+};
 
-    this.submitHandle = (e) => {
-      e.preventDefault();
-      const newItem = this.state.userInput;
-      this.setState({
-        userInput: "",
-        result: [
-          ...this.state.result,
-          { id: this.state.result.length, title: newItem, done: false },
-        ],
-      });
-    };
+const App = () => {
+  const [items, setList] = useState([
+    { title: "Learn JavaScript" },
+    { title: "Learn React" },
+  ]);
 
-    this.remove = (itemToRemove) => {
-      const newArray = this.state.result.filter(
-        (item) => item.id !== itemToRemove
-      );
-      console.log(newArray);
-      this.setState({
-        result: newArray,
-      });
-    };
+  const addNewItem = (userText) => {
+    const newArr = [...items, { title: userText }];
+    setList(newArr);
+  };
 
-    this.check = (itemToCheck) => {
-      const newArray = this.state.result.filter((item) => {
-        if (item.id === itemToCheck) {
-          item.done = !item.done;
-        }
-        return item;
-      });
-      console.log(newArray);
-      this.setState({
-        result: newArray,
-        // color: "red",
-      });
-      console.log(this.state.result);
-    };
+  const remove = (itemToRemove) => {
+    const newArr = items.filter((item) => item !== itemToRemove);
+    setList(newArr);
+  };
 
-    return (
-      <Fragment>
-        <h1>
-          To do today, &nbsp; <span>{this.state.curTime}:</span>
-        </h1>
-        <form onSubmit={this.submitHandle}>
-          <input
-            type="text"
-            value={this.state.userInput}
-            onChange={this.changeHandle}
-            placeholder="Add an item"
-          ></input>
-          <input type="submit" value="Add" />
-        </form>
-        <div className="items-box">
-          <ListOfItems
-            list={this.state.result}
-            del={this.remove}
-            check={this.check}
-            // style={{ color: this.state.color }}
-          />
-        </div>
-      </Fragment>
-    );
-  }
-}
+  return (
+    <Fragment>
+      <h1>Things to do today:</h1>
+      <ul>
+        {items.map((item, i) => (
+          <li>
+            <ItemInfo key={i} info={item} />
+            <button className="delete-btn" onClick={() => remove(item)}>
+              ✗
+            </button>
+          </li>
+        ))}
+      </ul>
+      <AddListForm addNewItem={addNewItem}></AddListForm>
+    </Fragment>
+  );
+};
+
 export default App;

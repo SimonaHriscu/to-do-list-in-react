@@ -1,8 +1,12 @@
 # To do list using REACT:
 
-### Preview:
+### Preview with React:
 
 ![Imgur](https://i.imgur.com/IIcu0AD.png)
+
+### Preview with React-Hooks:
+
+![Imgur](https://i.imgur.com/1xZQoZk.png)
 
 
 
