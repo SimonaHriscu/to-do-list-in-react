@@ -5,7 +5,30 @@
 
 ![Imgur](https://i.imgur.com/1xZQoZk.png)
 
+## Structure
 
+```
+Project
+│   README.md
+│   package.json
+|   package-lock.json
+|
+└─── public
+│      │
+│      └─── index.html
+|      └─── images
+|
+|
+└─── src
+      └─── index.js
+      └─── App.js
+      └─── scss
+               └─── main.scss
+        
+      
+  
+               
+``` 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
