@@ -1,11 +1,40 @@
-# To do list using REACT:
+# To-do list using REACT and React - Hooks:
 
-### Preview:
+* for the React-Hooks version, just checkout react-hooks branch
+
+### Preview in React:
 
 ![Imgur](https://i.imgur.com/IIcu0AD.png)
 
 
+## Structure
 
+```
+Project
+│   README.md
+│   package.json
+|   package-lock.json
+|
+└─── public
+│      │
+│      └─── index.html
+|      └─── images
+|
+|
+└─── src
+      └─── index.js
+      └─── App.js
+      │
+      └─── components
+      |        └─── ListOfItems.js
+      │        
+      └─── scss
+               └─── main.scss
+    
+      
+  
+               
+``` 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
