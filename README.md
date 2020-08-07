@@ -1,8 +1,16 @@
 # To-do list using REACT and React - Hooks:
 
-* for the React-Hooks version, just checkout react-hooks branch
+*** for the React-Hooks version, just checkout react-hooks branch ***
 
-### Preview in React:
+
+## Development tools and frameworks used:
+<h1>
+<img src="https://imgur.com/T1TApg1.png" alt="React" width="20%">
+<img src="https://imgur.com/fZuu2v0.png" alt="React" width="10%">
+<img src="https://imgur.com/plyrZV7.png" alt="React" width="10%">
+</h1>
+
+## Preview in React:
 
 ![Imgur](https://i.imgur.com/IIcu0AD.png)
 
