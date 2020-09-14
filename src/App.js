@@ -1,15 +1,15 @@
-import React, { Component, Fragment } from "react";
-import ListOfItems from "./components/ListOfItems";
+import React, { Component, Fragment } from 'react';
+import ListOfItems from './components/ListOfItems';
 
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      userInput: "",
-      curTime: new Date().toLocaleString().substr(0, 8),
+      userInput: '',
+      curTime: new Date().toLocaleString().substr(0, 9),
       result: [],
-      color: "",
+      color: '',
     };
   }
 
@@ -28,7 +28,7 @@ class App extends Component {
       e.preventDefault();
       const newItem = this.state.userInput;
       this.setState({
-        userInput: "",
+        userInput: '',
         result: [
           ...this.state.result,
           { id: this.state.result.length, title: newItem, done: false },
